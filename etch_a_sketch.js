@@ -6,8 +6,6 @@ function randomNumber(max=255) {
     return Math.floor((Math.random() *  max) + 1);
 }
 
-console.log(`Random Number = ${randomNumber()}`);
-
 function makeRandomColor() {
     return `rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)})`;
 }
@@ -31,9 +29,7 @@ function setGrid(gridSize=16) {
     }
 }
 
-
 setGrid();
-
 
 userBtn.addEventListener('click', () => {
     gridSize = Number(prompt("What length & width would you like your grid to be?"))
