@@ -2,10 +2,20 @@ const gridWrapper = document.querySelector("#grid-container");
 const userBtn = document.querySelector("#grid-btn");
 let gridList = [];
 
+function randomNumber(max=255) {
+    return Math.floor((Math.random() *  max) + 1);
+}
+
+console.log(`Random Number = ${randomNumber()}`);
+
+function makeRandomColor() {
+    return `rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)})`;
+}
 function enableBoxDraw(nodeList) {
     nodeList.forEach((element) => {
         element.addEventListener('mouseover', () => {
-            element.style.backgroundColor = 'black'
+            let randomColor = makeRandomColor()
+            element.style.backgroundColor = randomColor
         });
     });
 };
