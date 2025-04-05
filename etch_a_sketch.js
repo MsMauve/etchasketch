@@ -22,7 +22,7 @@ function setGrid(gridSize=16) {
     for (let i = 0; i < (gridSize * gridSize); i++) {
         let gridBox = document.createElement("div");
         gridBox.setAttribute("class", "grid-box");
-        gridBox.setAttribute("style", `border: 2px solid black; width: ${100/gridSize}%; height: ${100/gridSize}%`);
+        gridBox.setAttribute("style", `border: 1px solid black; width: ${100/gridSize}%; height: ${100/gridSize}%`);
         gridWrapper.appendChild(gridBox);
         gridList = document.querySelectorAll(".grid-box");
         enableBoxDraw(gridList);
